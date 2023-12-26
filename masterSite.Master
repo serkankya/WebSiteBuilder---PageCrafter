@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterSite.master.cs" Inherits="PageCraft.masterSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>PageCraft</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="menu/css/style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col">
+    <a class="navbar-brand" href="frmMain.aspx" style="font-size: 36px; color: #333; font-family: 'Roboto', sans-serif; font-weight: 700;">
+        <span style="font-size: 36px; display: inline;">Page</span> <span style="font-size: 36px; display: inline;">CRAFTER</span>
+    </a>
+</div>
+
+                    <div class="col d-flex justify-content-end">
+                        <div class="social-media">
+                            <p class="mb-0 d-flex">
+                                <a href="http://www.facebook.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                                <a href="http://www.x.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                                <a href="http://www.instagram.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                                <a href="http://www.serkanky.com" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span>Menu
+	     
+                    </button>
+
+                    <div class="order-lg-last">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <asp:Label ID="lblUser" runat="server" Text="Label"></asp:Label></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown05">
+    <asp:LinkButton ID="lblExit" OnClick="lblExit_Click" href="frmLogin.aspx" runat="server" CssClass="dropdown-item">Çıkış Yap</asp:LinkButton>
+    <a class="dropdown-item" href="frmInfos.aspx">
+        <asp:Label ID="lblInfos" runat="server" Text="Bilgilerim"></asp:Label>
+    </a>
+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="ftco-nav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"><a href="frmMain.aspx" class="nav-link">Ana Sayfa</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oluştur</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                    <a class="dropdown-item" href="frmDesign1.aspx">Tasarım 1</a>
+                                    <a class="dropdown-item" href="frmDesign2.aspx">Tasarım 2</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="frmOdeme.aspx" class="nav-link">Ödeme</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        </section>
+
+        <script src="menu/js/jquery.min.js"></script>
+        <script src="menu/js/popper.js"></script>
+        <script src="menu/js/bootstrap.min.js"></script>
+        <script src="menu/js/main.js"></script>
+    </form>
+</body>
+</html>
